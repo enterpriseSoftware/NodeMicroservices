@@ -13,8 +13,8 @@ spec:
         app: comments
     spec:
       containers:
-        - name: comments
-          image: rallycoding/comments-84
+      - name: comments
+        image: webologist/comments
 ---
 apiVersion: v1
 kind: Service
@@ -24,7 +24,7 @@ spec:
   selector:
     app: comments
   ports:
-    - name: comments
-      protocol: TCP
-      port: 4001
-      targetPort: 4001
+  - name: comments
+    protocol: TCP
+    port: 4001
+    targetPort: 4001

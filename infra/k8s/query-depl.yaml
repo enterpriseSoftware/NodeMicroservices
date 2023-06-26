@@ -13,8 +13,8 @@ spec:
         app: query
     spec:
       containers:
-        - name: query
-          image: rallycoding/query-84
+      - name: query
+        image: webologist/query
 ---
 apiVersion: v1
 kind: Service
@@ -24,7 +24,7 @@ spec:
   selector:
     app: query
   ports:
-    - name: query
-      protocol: TCP
-      port: 4002
-      targetPort: 4002
+  - name: query
+    protocol: TCP
+    port: 4002
+    targetPort: 4002

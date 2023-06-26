@@ -13,8 +13,8 @@ spec:
         app: event-bus
     spec:
       containers:
-        - name: event-bus
-          image: rallycoding/event-bus-86
+      - name: event-bus
+        image: webologist/event-bus
 ---
 apiVersion: v1
 kind: Service
@@ -24,7 +24,7 @@ spec:
   selector:
     app: event-bus
   ports:
-    - name: event-bus
-      protocol: TCP
-      port: 4005
-      targetPort: 4005
+  - name: event-bus
+    protocol: TCP
+    port: 4005
+    targetPort: 4005
