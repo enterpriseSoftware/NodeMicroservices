@@ -7,8 +7,11 @@ const PostList = () => {
   const [posts, setPosts] = useState({});
 
   const fetchPosts = async () => {
-    const res = await axios.get("http://localhost:4002/posts");
-
+    console.log("fetching posts from query-srv");    
+    const res = await axios.get("http://posts.com:4002/posts").catch((error)=>{
+      console.log('The error was ', error)
+    });
+    console.log('never gets here')
     setPosts(res.data);
   };
 
